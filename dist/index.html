@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yew Application</title>
+    
+    <!-- Import Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+<link rel="modulepreload" href="/yew-app-760d61c2d8e19a85.js" crossorigin=anonymous integrity="sha384-t9HzKrk6bz79t24ilDGTqeICvYsvEZRQEQrUcOh3pQKibrv+XNzKjhriJUsjjrWA">
+<link rel="preload" href="/yew-app-760d61c2d8e19a85_bg.wasm" crossorigin=anonymous integrity="sha384-YuMP6bJD/eaKmrUFgsmvwxonOcQNBU/jE/Ce891vSZnZyIAIBD1NPqnxFBl3W3t+" as="fetch" type="application/wasm"></head>
+<body>
+    <div id="root"></div>
+    <script>
+        function downloadCSV(filename, text) {
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+    
+            element.style.display = 'none';
+            document.body.appendChild(element);
+    
+            element.click();
+    
+            document.body.removeChild(element);
+        }
+    </script>
+
+<script type="module" nonce="Nb25s+wVuXeGVua2GYroZQ==">
+import init, * as bindings from '/yew-app-760d61c2d8e19a85.js';
+const wasm = await init('/yew-app-760d61c2d8e19a85_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
